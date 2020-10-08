@@ -89,8 +89,6 @@ class Movimento_Cavalo
         int[] PosInicio = { 1, 1 };
         int[] PosFim = { 8, 8 };
         Console.WriteLine(
-            minStepToReachTarget(
-                PosInicio,
-                PosFim, tamanho_tabuleiro));
+            minStepToReachTarget(PosInicio,PosFim, tamanho_tabuleiro));
     }
 }
