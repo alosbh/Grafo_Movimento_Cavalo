@@ -29,8 +29,7 @@ class Movimento_Cavalo
 
     // Método de retorno do degrau minimo
     // Procurar a posição de destino
-    static int minStepToReachTarget(int[] PosIn,
-                                    int[] PosFim, int Tam)
+    static int minStepToReachTarget(int[] PosIn,int[] PosFim, int Tam)
     {
         // direção de x e y, onde o cavalo possa se mover 
         int[] dx = { -2, -1, 1, 2, -2, -1, 1, 2 };
@@ -40,8 +39,7 @@ class Movimento_Cavalo
         Queue<cell> q = new Queue<cell>();
 
         // Inicia a posição do cavaleiro com zero.
-        q.Enqueue(new cell(PosIn[0],
-                           PosIn[1], 0));
+        q.Enqueue(new cell(PosIn[0],PosIn[1], 0));
 
         cell t;
         int x, y;
@@ -85,10 +83,9 @@ class Movimento_Cavalo
 
     public static void Main(String[] args)
     {
-        int tamanho_tabuleiro = 8;
-        int[] PosInicio = { 1, 1 };
-        int[] PosFim = { 8, 8 };
-        Console.WriteLine(
-            minStepToReachTarget(PosInicio,PosFim, tamanho_tabuleiro));
+        int tabuleiro_tam = 8;
+        int[] PosicaoBegin = { 1, 1 };
+        int[] PosicaoEnd = { 8, 8 };
+        Console.WriteLine(minStepToReachTarget(PosicaoBegin,PosicaoEnd, tabuleiro_tam));
     }
 }
